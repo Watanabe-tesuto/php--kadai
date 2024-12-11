@@ -13,15 +13,20 @@ $items = [
 の順でそれぞれ別ファイルで作成してください。*/
 
 foreach ($items as $item) {
-    echo $item['name'] ."は" . taxInn ($item['price']) ."円です。" ."<br>"; //商品を出力
+    echo $item['name'] ."は" . taxInn($item['price'], $item['tax']) ."円です。" ."<br>"; //商品を出力
+    
 }
 
-function taxInn($price){//税抜価格
+function taxInn($price,$tax){//税抜価格
+    if ($tax == 2) {
     $price1=$price*1.1; //税込価格の計算
     return $price1;
+    }
+    elseif ($tax == 1) {
+    $price2=$price*1.08;
+    return $price2;
+    }
 }
-
-
 
 
 
