@@ -14,8 +14,6 @@ $items = [
 $tax01=1.08;
 $tax02=1.1;
 
-$price ='price'; 
-
 function taxInn($price,$tax01){  //引数を1.08とにする。    
     $price1 = $price * $tax01; //税率８％
     echo   "は"  .  $price1 . "円です。<br>";

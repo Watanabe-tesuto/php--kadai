@@ -8,7 +8,6 @@ $items = [
 
 $tax01=1.08;
 $tax02=1.1;
-$price ='price';
 
 function taxInn($price){ //税抜価格
     $price1 = $price * $tax01; //税率８％
@@ -19,4 +18,4 @@ function taxInn($price){ //税抜価格
 
 echo   "は"  .  $price1 . "円です。<br>";
 echo   "は"  .  $price2 . "円です。<br>";
-taxInn ($price * $tax01);
+
