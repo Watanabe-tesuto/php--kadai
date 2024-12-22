@@ -19,12 +19,15 @@ foreach ($items as $item) {
 
 function taxInn($price,$tax){//税抜価格
     if ($tax == 2) {
-    $price1=$price*1.1; //税込価格の計算
+    $price1=$price*1.1; //税込10%価格の計算
     return $price1;
     }
     elseif ($tax == 1) {
-    $price2=$price*1.08;
+    $price2=$price*1.08; //税込8%価格の計算
     return $price2;
+    }
+    else {
+        return $price;
     }
 }
 
