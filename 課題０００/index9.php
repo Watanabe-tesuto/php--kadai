@@ -13,7 +13,7 @@ $items = [
 
 // 税込み価格を計算する関数
 function PriceTax($price, $taxType) {
-    $priceWithTax = $price; // デフォルト値を設定
+    $priceWithTax = $price; 
 
     if ($taxType === 1) {
         $priceWithTax = $price * (1 + TAX_RATE_1);
@@ -21,7 +21,7 @@ function PriceTax($price, $taxType) {
     elseif ($taxType === 2) {
         $priceWithTax = $price * (1 + TAX_RATE_2);
     }
-    return $priceWithTax; // 最後に1回だけreturn
+    return $priceWithTax; 
 }
 
 // 各商品の税込価格を出力
